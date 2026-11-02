@@ -1,0 +1,35 @@
+{
+  "name": "smartbord-ai-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @smartbord/mobile",
+    "build": "npm run build -w @smartbord/mobile",
+    "check": "tsc --noEmit",
+    "lint": "oxlint apps/mobile/src packages/local-library/src",
+    "test": "vitest run",
+    "test:web": "playwright test",
+    "native:sync": "npm run build && npm exec -w @smartbord/mobile -- cap sync",
+    "android:build": "npm run native:sync && npm run android:build -w @smartbord/mobile"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.0",
+    "@playwright/test": "1.64.1",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.2.1",
+    "oxlint": "1.90.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}

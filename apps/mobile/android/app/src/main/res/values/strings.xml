@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SmartBord</string>
+    <string name="title_activity_main">SmartBord</string>
+    <string name="package_name">ai.smartbord.capture</string>
+    <string name="custom_url_scheme">ai.smartbord.capture</string>
+</resources>
